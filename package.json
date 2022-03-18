@@ -1,0 +1,22 @@
+{
+  "name": "todo_list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ikram432k/todo_list.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ikram432k/todo_list/issues"
+  },
+  "homepage": "https://github.com/Ikram432k/todo_list#readme",
+  "devDependencies": {
+    "webpack-cli": "^4.9.2"
+  }
+}
