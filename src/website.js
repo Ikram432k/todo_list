@@ -2,6 +2,7 @@ import createHeader from './header';
 import craeteSideBar from './sidebar';
 import createPanel from './panel';
 
+
 function initilizewebpage(){
     const getdiv = document.getElementById('content');
     getdiv.appendChild(createHeader());
