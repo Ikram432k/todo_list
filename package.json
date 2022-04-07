@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Ikram432k/todo_list#readme",
   "devDependencies": {
     "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "date-fns": "^2.28.0"
   }
 }
