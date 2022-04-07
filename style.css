@@ -6,9 +6,19 @@ body{
 #content{
     display: grid;
     
-    grid-template-areas: 'head head head''side panel panel''side panel panel';
+    /* grid-template-areas: 'side panel panel';
     grid-template-columns: .5fr 1fr 1fr;
     grid-template-rows: .5fr 1fr 1fr;
+    height: 100vh; */
+
+    display: grid;
+    grid-template-areas: 
+    'head head head'
+    'side panel panel'    
+    'side panel panel'
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
     height: 100vh;
 }
 
@@ -29,8 +39,11 @@ h3,.header{
     background-color: #12121263;
     overflow: auto;
     padding-right: 0%;
+    overflow: auto;
+
 }
 .sidebtn{
+    
     display: flex;
     align-items: center;
     font-size: 1.5em;
@@ -41,22 +54,82 @@ h3,.header{
 h3{
     padding: 10px;
 }
-.panel{
+.container{
     grid-area: panel;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:flex-start;
     background-color: #707070;
     padding: 50px;
-}
-.addtask{
-    background-color: #dcdcdc;
-}
-.formdiv{
-    opacity: 0;
+    overflow: auto;
 
 }
+.panelcontent{
+    width:auto;
+    height: auto;
+}
+.addtask{
+    align-items: center;
+    font:bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    cursor: pointer;
+
+}
+.addtask:hover{
+    background-color: #b9b8b8;
+}
+.addtask.active{
+    display: none;
+}
+.formdiv{
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+.input-name{
+border: 1px solid #aaa;
+margin-bottom: 10px;
+}
+input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+.add-task-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+.add-pop-up-btn{
+    border: 1px solid #99dd99;
+    background-color: #aaffaa;
+    font-weight: bold;
+}
+.close-pop-btn{
+    border: 1px solid #eeadad;
+    background-color: #ffbebe;
+    font-weight: bold;
+}
+button{
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 .active{
-    opacity: 1;
+    display: block;
     pointer-events: auto;
+}
+.listtable{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+p{
+    margin: 0%;
+}
+.unActive{
+    display: none;
 }
