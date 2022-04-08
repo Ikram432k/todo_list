@@ -5,13 +5,6 @@ body{
 }
 #content{
     display: grid;
-    
-    /* grid-template-areas: 'side panel panel';
-    grid-template-columns: .5fr 1fr 1fr;
-    grid-template-rows: .5fr 1fr 1fr;
-    height: 100vh; */
-
-    display: grid;
     grid-template-areas: 
     'head head head'
     'side panel panel'    
@@ -26,13 +19,13 @@ h3,.header{
     background-color: #121212;
     color: #ffffff;
     margin: 0%;
-
 }
 .header{
-    padding: 25px;
     grid-area: head;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
 }
-
 .sidebar{
     grid-area: side;
     padding-top: 25px;
@@ -40,10 +33,8 @@ h3,.header{
     overflow: auto;
     padding-right: 0%;
     overflow: auto;
-
 }
-.sidebtn{
-    
+.sidebtn{    
     display: flex;
     align-items: center;
     font-size: 1.5em;
@@ -54,27 +45,72 @@ h3,.header{
 h3{
     padding: 10px;
 }
-.container{
+ .container{
+    --spacer: 2rem;
     grid-area: panel;
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
+    align-items:center;
     background-color: #707070;
     padding: 50px;
     overflow: auto;
-
 }
-.panelcontent{
-    width:auto;
-    height: auto;
+.taskcontainer{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.taskcontainer .task-list{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 600px;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: 800;
+    font-size: 1em;
+}
+.title{
+    margin: 0%;
+    padding: var(--spacer);
+    display: flex;
+}
+.task-list{
+    padding: var(--spacer);
+    font-size: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 .addtask{
     align-items: center;
-    font:bold;
     font-family: 'Roboto', sans-serif;
     font-size: 25px;
     cursor: pointer;
-
+}
+.remove{
+    cursor: pointer;
+    background: 0;
+    border: 0;
+    padding: 0;
+    color: inherit;
+}
+.proRemove{
+    cursor: pointer;
+    background: 0;
+    border: 0;
+    padding: 0; 
+}
+[type="checkbox"]:checked + .task-name {
+    opacity: 0.4;
+}
+.proList{
+    display: flex;
+    justify-content: space-between;
 }
 .addtask:hover{
     background-color: #b9b8b8;
@@ -82,54 +118,44 @@ h3{
 .addtask.active{
     display: none;
 }
-.formdiv{
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-}
-.input-name{
-border: 1px solid #aaa;
-margin-bottom: 10px;
-}
-input{
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-}
-.add-task-btn{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 20px;
-}
-.add-pop-up-btn{
+.add-btn{
     border: 1px solid #99dd99;
     background-color: #aaffaa;
-    font-weight: bold;
 }
-.close-pop-btn{
+.close-btn{
     border: 1px solid #eeadad;
     background-color: #ffbebe;
-    font-weight: bold;
-}
-button{
-    width: 100%;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
 }
 .active{
     display: block;
     pointer-events: auto;
-}
-.listtable{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5px;
 }
 p{
     margin: 0%;
 }
 .unActive{
     display: none;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.formdiv  .add-task-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+input{
+    padding: 10px;
+    margin: 5px;
+    font-size: 1em;
+    border-radius: 8px;
+}
+.proButton{
+    padding: 8px 16px;
+    margin: 5px;
+    font-size: 1em;
+    border-radius: 8px;
+    font-weight: 900;
 }
