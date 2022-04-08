@@ -9,7 +9,7 @@ class project{
         proform.classList.add('unActive');
         proform.innerHTML =
         "<input type='text' id='proNames' class='proNames' placeholder='projectName'></input>"+
-        "<div><button id='proAdd' class='proButton proAdd'>Add</button><button id='proCancel cancelbtn' class='proCancel'>Cancel</button></div>"
+        "<div><button id='proAdd' class='proButton proAdd add-btn'>Add</button><button id='proCancel cancelbtn' class='proButton proCancel close-btn'>Cancel</button></div>"
         ;
         return proform;
     }
@@ -26,7 +26,7 @@ class project{
         let proRemoveBtn = document.createElement('button');
         proRemoveBtn.classList.add('proRemove');
         proRemoveBtn.setAttribute('data-title',name);
-        proRemoveBtn.innerHTML = '<i class="material-icons">highlight_off</i>';
+        proRemoveBtn.innerHTML = '<i class="material-icons">delete</i>';
         div.appendChild(proRemoveBtn);
 
         return div;
