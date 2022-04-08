@@ -26,10 +26,10 @@ static createSideBar(){
     todaybtn.classList.add('today','sidebtn');
     sidebar.appendChild(todaybtn);
 
-    const thisweekbtn = document.createElement('div');
-    thisweekbtn.innerHTML = 'This week';
-    thisweekbtn.classList.add('this_week','sidebtn');
-    sidebar.appendChild(thisweekbtn);
+    // const thisweekbtn = document.createElement('div');
+    // thisweekbtn.innerHTML = 'This week';
+    // thisweekbtn.classList.add('this_week','sidebtn');
+    // sidebar.appendChild(thisweekbtn);
 
     const projecthead = document.createElement('h3');
     projecthead.innerHTML = 'Project';
@@ -55,7 +55,7 @@ static createMainPanel(){
 static addtask(){
     let addbtn = document.createElement('div');
     addbtn.classList.add('addtask');
-    addbtn.innerHTML = "Add new list";
+    addbtn.innerHTML = "+ Add list";
     return addbtn;
 }
 static container(){
@@ -65,9 +65,13 @@ static container(){
     let taskconatiner = document.createElement('div');
     taskconatiner.classList.add('taskcontainer');
 
+    let titleDiv = document.createElement('div');
+    titleDiv.classList.add('todo-header')
     let list_Title = document.createElement('h1');
     list_Title.classList.add('title');
-    taskconatiner.appendChild(list_Title);
+    titleDiv.appendChild(list_Title);
+    taskconatiner.appendChild(titleDiv);
+
     
     storage.appendChild(taskconatiner);
 
@@ -84,7 +88,7 @@ static taskForm(){
     form.innerHTML =
     "<input type='text' id='name' class='input-name' placeholder='Title'></input>"+
     "<input type='date' id='date' class='input-date'></input>"+
-    "<div class='add-task-btn'><button class='add-pop-up-btn'>Add</button><button class='close-pop-btn'>Cancel</button></div>"
+    "<div class='add-task-btn'><button class='proButton add-pop-up-btn add-btn'>Add</button><button class='proButton close-pop-btn close-btn'>Cancel</button></div>"
     ;
     return form;
 }
